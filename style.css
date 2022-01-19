@@ -1,0 +1,529 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  width: 100vw;
+  height: 100%;
+}
+
+header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+header button {
+  text-transform: uppercase;
+  color: gray;
+  font-size: 1rem;
+  background-color: transparent;
+  border: none;
+  transition: linear 0.5s;
+}
+
+header button:hover.active {
+  color: #000;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.container-show {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-show .left,
+.container-show .right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+
+.div-show {
+  width: 360px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: solid;
+  margin-top: 1rem;
+}
+
+.div1-show {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+}
+
+.div1-show img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-show {
+  padding: 1rem;
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  background: #fff;
+}
+
+.text-show .title {
+  max-width: 200px;
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.text-show .name {
+  font-size: 1.5rem;
+  color: gray;
+}
+
+.div2-show {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.div2-show .desc {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.5;
+}
+
+.div2-show .painted {
+  position: absolute;
+  top: 1.6rem;
+  right: 50%;
+  transform: translateX(50%);
+  font-size: 7rem;
+  color: #ddd;
+  z-index: -1;
+}
+
+.container {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  color: white;
+  padding: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(15, minmax(5rem, auto));
+  gap: 1rem;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "img1 img5 img9 img12"
+    "img1 img5 img9 img12"
+    "img1 img5 img9 img12"
+    "img2 img5 img9 img13"
+    "img2 img5 img10 img13"
+    "img2 img6 img10 img13"
+    "img2 img6 img10 img14"
+    "img3 img6 img10 img14"
+    "img3 img7 img10 img14"
+    "img3 img7 img11 img14"
+    "img3 img7 img11 img14"
+    "img3 img8 img11 img15"
+    "img4 img8 img11 img15"
+    "img4 img8 img11 img15"
+    "img4 img8 img11 img15";
+}
+
+.img1 {
+  grid-area: img1;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)),
+    url('https://images.photowall.com/products/45115/van-gogh-wincent-starry-night.jpg?h=699&q=85');
+}
+
+.img2 {
+  grid-area: img2;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)),
+    url('https://upload.wikimedia.org/wikipedia/commons/f/f3/Rembrandt_Christ_in_the_Storm_on_the_Lake_of_Galilee.jpg');
+}
+
+.img3 {
+  grid-area: img3;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)),
+    url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Lady_with_an_Ermine_-_Leonardo_da_Vinci_-_Google_Art_Project.jpg/1200px-Lady_with_an_Ermine_-_Leonardo_da_Vinci_-_Google_Art_Project.jpg');
+}
+
+.img4 {
+  grid-area: img4;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)),
+    url('https://theartist.me/wp-content/uploads/2017/08/Boy-in-Red-Vest-by-Paul-Cezanne.jpg');
+}
+
+.img5 {
+  grid-area: img5;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)),
+    url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/1665_Girl_with_a_Pearl_Earring.jpg/800px-1665_Girl_with_a_Pearl_Earring.jpg');
+}
+
+.img6 {
+  grid-area: img6;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)),
+    url('https://upload.wikimedia.org/wikipedia/commons/a/a5/Tsunami_by_hokusai_19th_century.jpg');
+}
+
+.img7 {
+  grid-area: img7;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)),
+    url('https://upload.wikimedia.org/wikipedia/commons/5/5e/Vincent_Willem_van_Gogh_076.jpg');
+}
+
+.img8 {
+  grid-area: img8;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)),
+    url('https://upload.wikimedia.org/wikipedia/commons/3/33/Van_Eyck_-_Arnolfini_Portrait.jpg');
+}
+
+.img9 {
+  grid-area: img9;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)),
+    url('https://niezlasztuka.net/wp-content/uploads/2018/10/pablo-picasso-guernica-detal.jpg');
+
+}
+
+.img10 {
+  grid-area: img10;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)),
+    url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project.jpg/206px-Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project.jpg');
+}
+
+.img11 {
+  grid-area: img11;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)),
+    url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/161px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg');
+}
+
+.img12 {
+  grid-area: img12;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)),
+    url('https://upload.wikimedia.org/wikipedia/commons/2/25/Artemisia_Gentileschi_%E2%80%94_Conversione_della_Maddalena_%28Maria_Maddalena_penitente.jpg');
+}
+
+.img13 {
+  grid-area: img13;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)),
+    url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx2WA4OEMpB8AFCgtG9LeSxtEQP1-Yb9uEfZjfHKeazA-46JdttbNuaBJVXvLfsqxv6D4&usqp=CAU');
+}
+
+.img14 {
+  grid-area: img14;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)),
+    url('https://upload.wikimedia.org/wikipedia/commons/3/38/Paul_C%C3%A9zanne_-_The_Basket_of_Apples_-_1926.252_-_Art_Institute_of_Chicago.jpg');
+}
+
+.img15 {
+  grid-area: img15;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)),
+    url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Fragonard_-_swing.jpg/188px-Fragonard_-_swing.jpg');
+}
+
+.img1,
+.img2,
+.img3,
+.img4,
+.img5,
+.img6,
+.img7,
+.img8,
+.img9,
+.img10,
+.img11,
+.img12,
+.img13,
+.img14,
+.img15 {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+p {
+  color: #ddd;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem;
+  }
+
+  .container {
+    width: 100vw;
+    padding: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(30, minmax(5rem, auto));
+    grid-template-areas:
+      "img1 img5 "
+      "img1 img5 "
+      "img1 img5 "
+      "img9 img5 "
+      "img9 img5 "
+      "img9 img12 "
+      "img9 img12 "
+      "img2 img12 "
+      "img2 img7 "
+      "img2 img7 "
+      "img2 img7 "
+      "img10 img14 "
+      "img10 img14 "
+      "img10 img14 "
+      "img10 img14"
+      "img10 img14"
+      "img3 img8 "
+      "img3 img8 "
+      "img3 img8 "
+      "img3 img8 "
+      "img3 img15 "
+      "img4 img15 "
+      "img4 img15 "
+      "img4 img15 "
+      "img11 img6 "
+      "img11 img6 "
+      "img11 img6 "
+      "img11 img13 "
+      "img11 img13 "
+      "img11 img13 ";
+    ;
+  }
+
+  .container-show {
+    flex-direction: column;
+    width: 100vw;
+    height: 100%;
+  }
+
+  .container-show .left,
+  .container-show .right {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container-show .left {
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .div-show {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .div2-show .desc {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .div1-show {
+    width: 70px;
+    height: 70px;
+    bottom: 1rem;
+    right: 25%;
+  }
+
+  .text-show {
+    top: 1rem;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .text-show .title {
+    max-width: 150px;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .text-show .name {
+    font-size: 1rem;
+  }
+
+  .div2-show .painted {
+    top: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 1rem;
+  }
+
+  header h2 {
+    font-size: 1rem;
+  }
+
+  .header a {
+    font-size: 0.6rem;
+  }
+
+  .container {
+    width: 100vw;
+    padding: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(60, minmax(6rem, auto));
+    grid-template-areas:
+      "img1 "
+      "img1 "
+      "img1 "
+      "img5 "
+      "img5 "
+      "img5 "
+      "img5 "
+      "img5 "
+      "img9 "
+      "img9 "
+      "img9 "
+      "img9 "
+      "img12 "
+      "img12 "
+      "img12 "
+      "img2"
+      "img2"
+      "img2"
+      "img2"
+      "img6 "
+      "img6 "
+      "img6 "
+      "img10"
+      "img10"
+      "img10"
+      "img10"
+      "img10"
+      "img13"
+      "img13 "
+      "img13 "
+      "img3 "
+      "img3 "
+      "img3 "
+      "img3 "
+      "img3 "
+      "img7 "
+      "img7 "
+      "img7 "
+      "img14 "
+      "img14 "
+      "img14 "
+      "img14 "
+      "img14 "
+      "img4 "
+      "img4 "
+      "img4 "
+      "img8 "
+      "img8 "
+      "img8 "
+      "img8 "
+      "img11 "
+      "img11 "
+      "img11 "
+      "img11 "
+      "img11 "
+      "img11 "
+      "img15 "
+      "img15 "
+      "img15 "
+      "img15 "
+    ;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .container-show .left,
+  .container-show .right {
+    align-items: center;
+    padding: 0 1rem;
+    width: 100vw;
+  }
+
+  .div-show {
+    width: 100%;
+    height: 70%;
+  }
+
+  .div1-show {
+    width: 40px;
+    height: 40px;
+    bottom: -5%;
+    right: 75%;
+    z-index: 100;
+  }
+
+  .div1-show img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .text-show {
+    width: 60%;
+    top: 68%;
+    right: 67%;
+    z-index: 100;
+  }
+
+  .text-show .title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .text-show .name {
+    font-size: 0.6rem;
+  }
+
+  .div2-show {
+    height: 100%;
+    padding: 0;
+  }
+
+  .div2-show .desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    line-height: 1;
+  }
+
+  .div2-show .painted {
+    top: 10%;
+    font-size: 3rem;
+  }
+}
